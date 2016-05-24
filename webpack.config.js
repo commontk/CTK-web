@@ -1,11 +1,11 @@
-var ctkLoaders = require(require.resolve('../../ctk-webpack-loaders.js'));
 var path = require('path');
 
 module.exports = {
-    entry: '.',
+    entry: './lib/',
     output: {
-        path: './dist',
-        filename: '[name].js',
+        filename: 'ctk.js',
+        path: 'dist',
+        library: 'CTK'
     },
     module: {
         preLoaders: [{
@@ -13,14 +13,14 @@ module.exports = {
             loader: 'eslint-loader',
             exclude: /node_modules/
         }],
-        loaders: ctkLoaders
+        loaders: require('./ctk-webpack-loaders.js')
     },
     resolve: {
         alias: {
-            ctk: path.resolve('../../lib')
+            ctk: path.resolve('./lib')
         }
     },
     eslint: {
-        configFile: require.resolve('../../.eslintrc.js')
+        configFile: '.eslintrc.js'
     }
 };
