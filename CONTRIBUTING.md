@@ -56,4 +56,7 @@ Then, click on the "Delete branch" button that appears afterward.
 
 #### Automatic testing of pull requests
 
-TODO
+Every pull request is tested automatically using CircleCI each time you push a
+commit to it. The Github UI will restrict users from merging pull requests until
+the CI build has returned with a successful result indicating that all tests have
+passed and there were no problems detected by the linter.
