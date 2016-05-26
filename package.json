@@ -8,7 +8,7 @@
     "url": "https://github.com/commontk/CTK-web.git"
   },
   "engines": {
-    "node": ">= 0.12",
+    "node": ">= v4.2.6",
     "npm": ">= 3.5"
   },
   "dependencies": {
